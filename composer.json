@@ -1,0 +1,41 @@
+{
+    "name": "firemq/firemq",
+    "description": "PHP client for FireMQ, a RabbitMQ-compatible message broker, over the native FireMQ protocol",
+    "type": "library",
+    "license": "Apache-2.0",
+    "keywords": ["firemq", "messaging", "queue", "amqp", "rabbitmq", "message-broker"],
+    "homepage": "https://github.com/FireMQ/firemq-php",
+    "support": {
+        "issues": "https://github.com/FireMQ/firemq-php/issues",
+        "source": "https://github.com/FireMQ/firemq-php"
+    },
+    "require": {
+        "php": ">=8.1",
+        "rybakit/msgpack": "^0.9.1"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^10.5"
+    },
+    "suggest": {
+        "ext-openssl": "Required for fires:// (TLS) connections"
+    },
+    "autoload": {
+        "psr-4": {
+            "FireMQ\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FireMQ\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan analyse --no-progress"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable"
+}
