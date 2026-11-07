@@ -1,0 +1,8 @@
+parameters:
+    level: 5
+    paths:
+        - src
+        - conformance
+        - examples
+    # Public methods validate their input at runtime even when PHPDoc types promise more.
+    treatPhpDocTypesAsCertain: false
